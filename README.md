@@ -14,7 +14,15 @@ export type CityData = {
 
 ```typescript
 import React, {useEffect, useMemo, useState} from 'react';
-import PrefectureData from 'japanese-city-data';
+import PrefectureData, {CityData} from 'japanese-city-data';
+
+const Select = ({items, onValueChange, ...rest}: {items: CityData[], onValueChange: (value: number) => void}) => (
+  <select onChange={e => onValueChange(e.target.value)} {...rest}>
+    {items.map(({label, value}) => (
+        <option value={value}>{label}</option>
+    ))}
+  </select>
+);
 
 const Component = () => {
     const [prefecture, setPrefecture] = useState(0);
