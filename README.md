@@ -19,7 +19,7 @@ import PrefectureData, {CityData} from 'japanese-city-data';
 const Select = ({items, onValueChange, ...rest}: {items: CityData[], onValueChange: (value: number) => void}) => (
   <select onChange={e => onValueChange(e.target.value)} {...rest}>
     {items.map(({label, value}) => (
-        <option value={value}>{label}</option>
+        <option key={value} value={value}>{label}</option>
     ))}
   </select>
 );
