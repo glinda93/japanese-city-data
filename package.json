@@ -1,6 +1,6 @@
 {
   "name": "japanese-city-data",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Japanese prectures and cities in tree structure",
   "main": "dist/japanese-city-data.js",
   "dependencies": {
@@ -18,5 +18,10 @@
     "City"
   ],
   "author": "glinda93",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/glinda93/japanese-city-data.git"
+  },
+  "homepage": "https://github.com/glinda93/japanese-city-data#readme"
 }
