@@ -1,0 +1,21 @@
+{
+  "name": "japanese-city-data",
+  "version": "0.1.0",
+  "description": "Japanese prectures and cities in tree structure",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "Japan",
+    "Tree",
+    "Prefecture",
+    "City"
+  ],
+  "author": "glinda93",
+  "license": "MIT"
+}
