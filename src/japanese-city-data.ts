@@ -7,7 +7,6 @@ export type CityData = {
 };
 
 const Data: CityData[] = fixture;
-export default Data;
 
 export const getPrefId = (pref: string) => {
     const prefItem = Data.find(item => {
@@ -51,3 +50,5 @@ export const getPrefAndCityId = ({pref, city}: {pref: string|undefined|null, cit
     cityId = getCityIdByPrefId(prefId, city);
     return {prefId, cityId};
 };
+
+export default Data;
