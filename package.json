@@ -1,6 +1,6 @@
 {
   "name": "japanese-city-data",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Japanese prectures and cities in tree structure",
   "main": "dist/japanese-city-data.js",
   "dependencies": {
