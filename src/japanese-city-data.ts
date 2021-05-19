@@ -35,11 +35,19 @@ export const getCityIdByPrefId = (prefId: number, city: string) => {
     return null;
 };
 
-export const getPrefAndCityId = ({pref, city}: {pref: string, city: string}) => {
-    const prefId = getPrefId(pref);
-    if (prefId === null) {
-        return {prefId: null, cityId: null};
+export const getPrefAndCityId = ({pref, city}: {pref: string|undefined|null, city: string|undefined|null}) => {
+    let prefId: number|null = null;
+    let cityId: number|null = null;
+    if (!pref) {
+        return {prefId, cityId};
     }
-    const cityId = getCityIdByPrefId(prefId, city);
+    prefId = getPrefId(pref);
+    if (prefId === null) {
+        return {prefId, cityId};
+    }
+    if (!city) {
+        return {prefId, cityId};
+    }
+    cityId = getCityIdByPrefId(prefId, city);
     return {prefId, cityId};
 };
