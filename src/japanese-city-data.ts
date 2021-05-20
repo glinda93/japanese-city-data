@@ -9,9 +9,7 @@ export type CityData = {
 const Data: CityData[] = fixture;
 
 export const getPrefId = (pref: string) => {
-    const prefItem = Data.find(item => {
-        item.label === pref;
-    });
+    const prefItem = Data.find(item => item.label === pref);
     if (prefItem) {
         return prefItem.value;
     }
@@ -19,13 +17,9 @@ export const getPrefId = (pref: string) => {
 };
 
 export const getCityIdByPrefId = (prefId: number, city: string) => {
-    const prefItem = Data.find(item => {
-        item.value === prefId;
-    })
+    const prefItem = Data.find(item => item.value === prefId)
     if (prefItem) {
-        const cityItem = prefItem.children?.find(item => {
-            item.label === city;
-        });
+        const cityItem = prefItem.children?.find(item => item.label === city);
         if (cityItem) {
             return cityItem.value;
         }
