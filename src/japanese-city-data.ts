@@ -45,4 +45,16 @@ export const getPrefAndCityId = ({pref, city}: {pref: string|undefined|null, cit
     return {prefId, cityId};
 };
 
+export const getPrefAndCityName = ({prefId, cityId}:  { prefId: number|null|undefined, cityId: number|null|undefined }) => {
+    const pref = Data.find(item => item.value === prefId);
+    if (!pref) {
+        return {pref: '', city: ''};
+    }
+    const city = pref.children?.find(item => item.value === cityId);
+    if (!city) {
+        return { pref: pref.label, city: '' };
+    }
+    return { pref: pref.label, city: city.label };
+};
+
 export default Data;
